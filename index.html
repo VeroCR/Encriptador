@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="VeroRM">
+    <meta name="keywords" content="encriptador, desencriptador, encriptar, desencriptar, texto, mensaje, secreto, secreto, encriptado, desencriptado, encriptación, desencriptación">
+    <link rel="icon" href="assets/cheems1.png">
+    <title>Encriptador</title>
+    <meta name="description" content="Encriptador">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="neon">
+        <h1>Encriptador</h1>
+    </header>
+    <div class="grid">
+        <section class="text-input">
+            <textarea id="input" placeholder="Escribe aquí el texto a encriptar o desencriptar"></textarea>
+            <footer>
+                <i class="flex">
+                    <svg width="25" height="25" fill="currentColor" class="" viewBox="0 0 25 25">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+                    </svg>
+                    <label class="label-icon">
+                        Solo letras minúsculas y sin acentos
+                    </label>
+                </i>
+                <div class="buttons">
+                    <button class="primary-btn" onclick="encriptar()">Encriptar</button>
+                    <button class="secondary-btn" onclick="desencriptar()">Desencriptar</button>
+                </div>
+            </footer>
+        </section>
+        <section class="encriptado">
+            <p id="output" class="output"></p>
+            <div id="info" class="info-encriptado">
+                <img src="assets/cheems1.png" alt="Cheems" class="cheems">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p class="subtitle">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <footer>
+                <button id="btnCopy" class="copy-btn" onclick="copiar()">Copiar</button>
+            </footer>
+        </section>
+    </div>
+    <footer class="footer">
+        <p>Hecho con <span class="heart">❤</span> por <span class="name">VeroRM</span></p>
+    </footer>
+    <script src="index.js" async defer></script>
+</body>
+
+</html>

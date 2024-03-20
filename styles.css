@@ -1,0 +1,243 @@
+:root {
+    --copy-neon-color: #ffee00bb;
+    --neon-color: #f8049c;
+    --primary-neon-color: rgb(64, 224, 208);
+    --background-color: #444;
+    --text-color: #fff;
+}
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #333;
+    color: var(--text-color);
+    padding: 1em 1em 0 1em;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+h1 {
+    font-size: 1.5em;
+    text-shadow: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color), 0 0 15px var(--primary-neon-color), 0 0 20px var(--primary-neon-color);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1em;
+    justify-items: center;* {
+        box-sizing: border-box;
+    }
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.label-icon {
+    margin-left: 0.5em;
+    font-size: 0.8em;
+}
+
+section {
+    width: 85%;
+    height: 100%;
+}
+
+.text-input {
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color), 0 0 15px var(--neon-color), 0 0 20px var(--neon-color);
+}
+
+textarea {
+    font-family: monospace;
+    width: 100%;
+    height: 70vh;
+    resize: none;
+    background-color: transparent;
+    padding: 1em;
+    border: none;
+    color:var(--text-color);
+    overflow: auto;
+    font-size: 0.8em;
+    line-height: 1.6;
+}
+
+.encriptado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: var(--text-color);
+    resize: none;
+    box-shadow: 0 0 5px var(--primary-neon-color), 0 0 10px var(--primary-neon-color), 0 0 15px var(--primary-neon-color), 0 0 20px var(--primary-neon-color);
+}
+
+.output {
+    font-family: monospace;
+    max-height: 70vh;
+    overflow: auto;
+    word-wrap: break-word;
+    font-size: 0.8em ;
+    text-align: left;
+}
+
+.primary-btn {
+    min-width: 30%;
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    text-shadow: 0 0 5px var(--primary-neon-color), 0 0 10px var(--primary-neon-color), 0 0 15px var(--primary-neon-color), 0 0 20px var(--primary-neon-color);
+    box-shadow: 0 0 5px var(--primary-neon-color), 0 0 10px var(--primary-neon-color), 0 0 15px var(--primary-neon-color), 0 0 20px var(--primary-neon-color);
+}
+
+.primary-btn:hover {
+    background-color: rgba(64, 224, 208, 0.411);
+}
+
+.secondary-btn {
+    min-width: 30%;
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    text-shadow: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color), 0 0 15px var(--neon-color), 0 0 20px var(--neon-color);
+    box-shadow: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color), 0 0 15px var(--neon-color), 0 0 20px var(--neon-color);
+}
+
+.secondary-btn:hover {
+    background-color: #f8049b60;
+}
+
+.copy-btn {
+    display: none;
+    width: 80%;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition:  all 0.3s ease;
+    text-shadow: 0 0 5px var(--copy-neon-color), 0 0 10px var(--copy-neon-color), 0 0 15px var(--copy-neon-color), 0 0 20px var(--copy-neon-color);
+    box-shadow: 0 0 5px var(--copy-neon-color), 0 0 10px var(--copy-neon-color), 0 0 15px var(--copy-neon-color), 0 0 20px var(--copy-neon-color);
+}
+
+.copy-btn:hover {
+    background-color: rgba(255, 238, 0, 0.411);
+}
+
+.encriptado footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.encriptado h2 {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.subtitle {
+    margin-top: 1em;
+    font-size: 0.9em;
+}
+
+.cheems {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.info-encriptado {
+    margin-top: auto;
+}
+
+.footer {
+    text-align: center;
+    margin-top: auto;
+    font-size: .8em;
+}
+
+.heart {
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color), 0 0 15px var(--neon-color), 0 0 20px var(--neon-color);
+}
+
+.name {
+    color: var(--text-color);
+    
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    header {
+        margin-bottom: 1em;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+
+    textarea {
+        min-height: 55vh;
+    }
+
+    .cheems {
+        display: none;
+    }
+
+    .encriptado {
+        gap: 1em;
+    }
+}
